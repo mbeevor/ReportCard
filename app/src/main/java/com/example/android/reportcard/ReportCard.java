@@ -15,12 +15,12 @@ public class ReportCard {
     String mTeacherName;
 
     public ReportCard(String studentName, String className, String teacherName, int englishScore, int scienceScore, int mathsScore) {
-        mStudentName = studentName;
-        mClassName = className;
-        mTeacherName = teacherName;
-        mEnglishScore = englishScore;
-        mScienceScore = scienceScore;
-        mMathsScore = mathsScore;
+        this.mStudentName = studentName;
+        this.mClassName = className;
+        this.mTeacherName = teacherName;
+        this.mEnglishScore = englishScore;
+        this.mScienceScore = scienceScore;
+        this.mMathsScore = mathsScore;
     }
 
     @Override
@@ -52,7 +52,7 @@ public class ReportCard {
     }
 
     public void setEnglishScore(int englishScore) {
-        mEnglishScore = englishScore;
+        this.mEnglishScore = englishScore;
     }
 
     public int getScienceScore() {
@@ -60,7 +60,7 @@ public class ReportCard {
     }
 
     public void setScienceScore(int scienceScore) {
-        mScienceScore = scienceScore;
+        this.mScienceScore = scienceScore;
     }
 
     public int getMathsScore() {
@@ -68,7 +68,7 @@ public class ReportCard {
     }
 
     public void setMathsScore(int mathsScore) {
-        mMathsScore = mathsScore;
+        this.mMathsScore = mathsScore;
     }
 
     public char englishGrade(int englishScore) {
