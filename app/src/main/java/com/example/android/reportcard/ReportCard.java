@@ -6,25 +6,28 @@ public class ReportCard {
     // This is a constant as it will not change for any pupil
     private static final String SCHOOL_NAME = "St. Paul's Secondary School";
     // These are all variables that can be changed
-    int mEnglishScore;
-    char englishGrade;
-    int mScienceScore;
-    char scienceGrade;
-    int mMathsScore;
-    char mathsGrade;
-    String mStudentName;
-    String mClassName;
-    String mTeacherName;
+    private int mEnglishScore;
+    private char mEnglishGrade;
+    private int mScienceScore;
+    private char mScienceGrade;
+    private int mMathsScore;
+    private char mMathsGrade;
+    private String mStudentName;
+    private String mClassName;
+    private String mTeacherName;
 
 
     // This is the report card constructor
-    public ReportCard(String studentName, String className, String teacherName, int englishScore, int scienceScore, int mathsScore) {
+    public ReportCard(String studentName, String className, String teacherName, int englishScore, char englishGrade, int scienceScore, char scienceGrade, int mathsScore, char mathsGrade) {
         this.mStudentName = studentName;
         this.mClassName = className;
         this.mTeacherName = teacherName;
         this.mEnglishScore = englishScore;
+        this.mEnglishGrade = englishGrade;
         this.mScienceScore = scienceScore;
+        this.mScienceGrade = scienceGrade;
         this.mMathsScore = mathsScore;
+        this.mMathsGrade = mathsGrade;
     }
 
     // This is the output of the class
@@ -35,9 +38,9 @@ public class ReportCard {
                 "\n" + "Class: " + mClassName +
                 "\n" + "Teacher: " + mTeacherName +
                 "\n" + "Subject Grades: " +
-                "\n" + "  English - score of " + mEnglishScore + " which is graded " + englishGrade + ".\n" +
-                "  Science - score of " + mScienceScore + " which is graded " + scienceGrade + ".\n" +
-                "  Maths - score of " + mMathsScore + " which is graded " + mathsGrade + ".\n";
+                "\n" + "  English - score of " + mEnglishScore + " which is graded " + mEnglishGrade + ".\n" +
+                "  Science - score of " + mScienceScore + " which is graded " + mScienceGrade + ".\n" +
+                "  Maths - score of " + mMathsScore + " which is graded " + mMathsGrade + ".\n";
     }
 
     // method to recall the student's name
@@ -86,7 +89,7 @@ public class ReportCard {
     }
 
     // if/else methods to calculate grades for each subject
-    public char englishGrade(int englishScore) {
+    public char setEnglishGrade(int englishScore) {
         if (englishScore >= 90) {
             return 'A';
         } else if (englishScore >= 80) {
@@ -101,7 +104,7 @@ public class ReportCard {
         return 'F';
     }
 
-    public char getScienceGrade(int scienceScore) {
+    public char setScienceGrade(int scienceScore) {
         if (scienceScore >= 90) {
             return 'A';
         } else if (scienceScore >= 80) {
@@ -116,7 +119,7 @@ public class ReportCard {
         return 'F';
     }
 
-    public char getMathsGrade(int mathsScore) {
+    public char setMathsGrade(int mathsScore) {
         if (mathsScore >= 90) {
             return 'A';
         } else if (mathsScore >= 80) {
@@ -130,8 +133,4 @@ public class ReportCard {
         }
         return 'F';
     }
-
-    // new object for one student, with inputs for each variable
-    ReportCard studentOne = new ReportCard("Matthew Beevor", "Vianney", "Mr Small", 55, 79, 90);
-
 }
